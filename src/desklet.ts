@@ -1,3 +1,6 @@
+// @ts-nocheck
+// Baseline migration: preserve upstream GJS behavior while TypeScript builds it.
+// Type annotations and checking will be introduced incrementally.
 const Desklet = imports.ui.desklet;
 const PopupMenu = imports.ui.popupMenu;
 const St = imports.gi.St;
