@@ -399,3 +399,6 @@ FodyWeavers.xsd
 
 # Node.js dependencies
 node_modules/
+
+# Compiled Cinnamon entry point
+music-display@nicholasjdi/desklet.js
