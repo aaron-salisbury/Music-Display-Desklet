@@ -1,7 +1,7 @@
 name: Build
 on:
   push:
-    branches: [Main, feature/typescript-baseline]
+    branches: [Main]
   pull_request:
   workflow_dispatch:
 permissions:
