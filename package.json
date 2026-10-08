@@ -1,0 +1,11 @@
+{
+  "private": true,
+  "scripts": {
+    "build": "tsc --project tsconfig.json",
+    "check": "tsc --project tsconfig.json --noEmit",
+    "verify": "npm run check && npm run build && node scripts/verify-build.cjs"
+  },
+  "devDependencies": {
+    "typescript": "5.9.3"
+  }
+}

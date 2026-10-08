@@ -1,9 +1,9 @@
 # Music-Display Desklet
 A Linux Mint Cinnamon Desklet for displaying what is currently being played by Players supporting the MPRIS D-Bus Specification such as Rhythmbox, Firefox, Spotify, and more, using the playerctl command-line utility.
-## Instillation
-Go to your Desklets folder `~/.local/share/cinnamon/desklets` (or create it if it doesn't exist) and run `git clone https://github.com/NicholasJDi/Music-Display-Desklet`, go inside the generated folder and drag out the `music-display@nicholasjdi` folder into the Desklets folder and delete the `Music-Display-Desklet` folder, run `sudo apt install playerctl` and you should be good to go! (of course enable the Desklet)
+## Installation
+Install `playerctl` (`sudo apt install playerctl`). Download the build artifact from GitHub Actions or build locally using `npm ci && npm run verify`. Copy the `music-display@nicholasjdi` directory into `~/.local/share/cinnamon/desklets/`, then enable Music Display in Cinnamon's **Add Desklets** settings. Node.js is only required to build, not to run the desklet.
 
-I'm not sure what versions this is supported by so any help figuring that out would be appreciated, but i built this on Linux Mint 22.2 with Cinnamon 6.4.8 sorry if this doesn't work on your version.
+See [DEVELOPMENT.md](./docs/DEVELOPMENT.md) for the development workflow and UI testing.
 ## Configuration
 Desklet looks like this by default:<br>
 <img width="164" height="98" alt="Screenshot from 2025-09-08 08-43-38" src="https://github.com/user-attachments/assets/c7ed5d39-02f2-465a-8b24-719284d118dd" />
@@ -72,81 +72,9 @@ The size of the Buttons, when setting this with hidden skip buttons it looks lik
 <img width="248" height="64" alt="image" src="https://github.com/user-attachments/assets/553941d4-68ae-495c-b44b-d9f1a6f694e3" />
 #### Play/Pause/Next/Previous Button Texture
 Custom Texture to use for the Buttons. (forcefully rendered as a square)
-## That Should Be All The Important Stuff, I Hope You Enjoy Using This!
+## Credits
 Also the inspiration for this is from https://www.reddit.com/r/Minecraft/comments/10br3xj/my_desktop_theme_for_2023 (you can also use Hidamari and dual-datetime@rcalixte to get an almost perfect match to this :D)
 
-If your wondering, this is my desktop: (fonts are Minecraftia and Lobster)<br>
+Original author's desktop: (fonts are Minecraftia and Lobster)<br>
 <img width="1366" height="768" alt="image" src="https://github.com/user-attachments/assets/586e0ab5-b535-4ed9-8cf0-a2febfbe8418" /><br>
 <br><br><br>
-# Music-Display Additions
-Music-Display Additions is a Sister Desklet of Music-Display Desklet that shows current Time and Art of a Track using similar systems.
-## Instillation
-Same as Instillation for Music-Display Desklet, just also drag out `music-display-additions@nicholasjdi`.
-## Configuration
-Music-Display Additions Configuration is quite complex
-### Desklet Settings
-#### Disabled
-Whether or not to Disable the Desklet, this is also in the Context Menu.
-#### X/Y Size
-The X and Y Size of the Desklet.
-### Text Settings
-#### Enabled
-Whether or not Text is Enabled.
-#### Format
-%time|(modifier)%, %position|(modifier)%, %length|(modifier)%. (%time%)
-##### Modifiers include:
-0:00 = 0:01-1:17:03<br>
-00:00 = 00:01-1:17:03<br>
-00 = 1-1:17:03<br>
-0:0 = Adaptive to song length from other modifiers above<br>
-0 = 1-1:17:3<br>
-(default is 0:00)
-#### Font
-The Font of the Text.
-#### Color
-The Color of the Text.
-#### Position
-The Anchor Position of the Text, Values are: Top Left, Top Right, Bottom Left, Bottom Right, Center.
-#### X/Y Offset
-The X and Y Offset of the Text from the Anchor Position.
-#### No Art Position
-The Anchor Position of the Text when no Art is found, (not Art Enabled = false) Values are: Top Left, Top Right, Bottom Left, Bottom Right, Center.
-#### No Art X/Y Offset
-The X and Y Offset of the Text from the Anchor Position when no Art is found. (not Art Enabled = false) 
-#### Keep Text Within Art
-Anchor Text within Art when Art is not the same aspect ratio as the Desklet.
-#### Outline Enabled
-Whether or not Text Outline is Enabled.
-#### Outline Size
-How large the Text Outline is in Pixels.
-#### Outline Color
-The Color of the Text Outline.
-### Art Settings
-#### Enabled
-Whether or not Art is Enabled.
-#### Margin Size
-The size of the Margin around Art.
-#### Margin Color
-The Color of the Margin around Art.
-#### Background Color
-The Color above the Margin, behind Art. (for if Art is transparent)
-#### Overrides Enabled
-Whether or not Per Track Art Overrides are Enabled.
-#### Position
-The Anchor Position of Art when Art is not the same aspect ratio as the Desklet. (not Art Enabled = false) Values are: Top Left, Top Right, Bottom Left, Bottom Right, Center.
-#### Art Override Directory
-The Directory to fetch Art Overrides from, Files are formatted as "(Artist) - (Title).png" so "Lemmino - Cipher.png" for example. (jpg and webp are also supported.)
-#### Mix Detection
-Check 'xesam:comment' for lines formatted as "[(hours):(minutes):(seconds)]: (Title)"
-
-If these lines exist it will use the provided title for overrides.<br>
-(this can also be used to set overrides that do not rely on xesam:title which is nice.)
-
-This can decrease performance a lot.
-### Player Settings
-#### Player Whitelist
-A Comma-separated list of allowed Players. (rhythmbox,spotify)
-#### Treat Whitelist As Blacklist
-Whether or not to treat the Whitelist as a Blacklist
-### Example
-<img width="1366" height="768" alt="image" src="https://github.com/user-attachments/assets/0a3accd3-59ef-4e14-98a0-75a11741e1dc" />

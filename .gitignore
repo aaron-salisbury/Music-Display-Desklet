@@ -396,3 +396,9 @@ FodyWeavers.xsd
 
 # JetBrains Rider
 *.sln.iml
+
+# Node.js dependencies
+node_modules/
+
+# Compiled Cinnamon entry point
+music-display@nicholasjdi/desklet.js

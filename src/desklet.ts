@@ -7,11 +7,11 @@ const Gio = imports.gi.Gio;
 const Settings = imports.ui.settings;
 const Pango = imports.gi.Pango;
 
-function MusicDisplayDesklet(metadata, instance_id) {
+function MusicDisplayDesklet(this: any, metadata: any, instance_id: number) {
 	this._init(metadata, instance_id);
 }
 
-MusicDisplayDesklet.prototype = {
+const musicDisplayPrototype: Record<string, any> & ThisType<any> = {
 	__proto__: Desklet.Desklet.prototype,
 
 	_init: function (metadata, instance_id) {
@@ -657,7 +657,7 @@ MusicDisplayDesklet.prototype = {
 				return {};
 			const start = i++; // opening %
 
-			const node = {};
+			const node: Record<string, any> = {};
 
 			// prefix
 			if (text[i] === "{") {
@@ -953,6 +953,8 @@ MusicDisplayDesklet.prototype = {
 	}
 }
 
-function main(metadata, instance_id) {
+MusicDisplayDesklet.prototype = musicDisplayPrototype;
+
+function main(metadata: any, instance_id: number) {
 	return new MusicDisplayDesklet(metadata, instance_id);
 }
