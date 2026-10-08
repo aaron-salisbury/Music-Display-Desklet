@@ -1,7 +1,7 @@
 # Development
 
 The main Music Display desklet is authored in TypeScript at `src/desklet.ts`.
-The generated `music-display@nicholasjdi/desklet.js` is intentionally committed so the Cinnamon desklet can also be installed directly from a checkout. This first slice preserves the upstream desklet behavior and UUID. The companion Music Display Additions desklet is unchanged.
+The upstream `music-display@nicholasjdi/desklet.js` remains committed for direct installation, but **run the build** before testing TypeScript changes. CI packages the compiled output. This first slice preserves the upstream desklet behavior and UUID. The companion Music Display Additions desklet is unchanged.
 
 ## Build
 
@@ -12,7 +12,7 @@ npm ci
 npm run verify
 ```
 
-The TypeScript compiler emits legacy script-style JavaScript (no ES imports or exports). The current Cinnamon interfaces use permissive local ambient declarations; tightening them is future work. CI verifies compilation, syntax, entry point, metadata, settings and required assets; it does **not** run Cinnamon or perform visual testing.
+The TypeScript compiler emits legacy script-style JavaScript (no ES imports or exports). The existing upstream file is temporarily marked `@ts-nocheck` to ensure a behavior-preserving first compilation; the global declarations are permissive. Adding real types and removing that directive is future work. CI verifies compilation, syntax, entry point, metadata, settings and required assets; it does **not** run Cinnamon or perform visual testing.
 
 ## UI testing on Linux Mint Cinnamon
 
