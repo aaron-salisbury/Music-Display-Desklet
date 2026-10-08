@@ -3,7 +3,7 @@ A Linux Mint Cinnamon Desklet for displaying what is currently being played by P
 ## Installation
 Install `playerctl` (`sudo apt install playerctl`). Download the build artifact from GitHub Actions or build locally using `npm ci && npm run verify`. Copy the `music-display@nicholasjdi` directory into `~/.local/share/cinnamon/desklets/`, then enable Music Display in Cinnamon's **Add Desklets** settings. Node.js is only required to build, not to run the desklet.
 
-See [DEVELOPMENT.md](DEVELOPMENT.md) for the development workflow and UI testing.
+See [DEVELOPMENT.md](./docs/DEVELOPMENT.md) for the development workflow and UI testing.
 ## Configuration
 Desklet looks like this by default:<br>
 <img width="164" height="98" alt="Screenshot from 2025-09-08 08-43-38" src="https://github.com/user-attachments/assets/c7ed5d39-02f2-465a-8b24-719284d118dd" />

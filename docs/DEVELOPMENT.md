@@ -19,6 +19,12 @@ The build generates legacy script-style JavaScript compatible with Cinnamon's de
 2. Run `npm ci && npm run verify` in the repository.
 3. If already installed, back up `~/.local/share/cinnamon/desklets/music-display@nicholasjdi` outside the Cinnamon desklets directory.
 4. Copy the **contents** of `music-display@nicholasjdi/` into `~/.local/share/cinnamon/desklets/music-display@nicholasjdi/`.
+
+      ```bash
+        cp -a \
+          music-display@nicholasjdi/. \
+          ~/.local/share/cinnamon/desklets/music-display@nicholasjdi/
+      ```
 5. Disable and re-enable Music Display in Cinnamon's **Add Desklets** window.
 6. Check track metadata, playback controls and settings. Inspect Cinnamon's Looking Glass error log (`cinnamon-looking-glass`) if it fails to load.
 
