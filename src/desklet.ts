@@ -657,7 +657,7 @@ const musicDisplayPrototype: Record<string, any> & ThisType<any> = {
 				return {};
 			const start = i++; // opening %
 
-			const node = {};
+			const node: Record<string, any> = {};
 
 			// prefix
 			if (text[i] === "{") {
